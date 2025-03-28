@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(135deg, #6a0dad, #b19cd9);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.bio-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.bio-text h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.bio-text h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.bio-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+    text-align: justify;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones */
+.bio-text p:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+.bio-image img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}

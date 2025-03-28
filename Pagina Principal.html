@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="Diseño.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Pingüinos Chiquititos</title>    
+</head>
+
+<body>
+
+    <header>
+        <h1>Los Pingüinos Chiquititos</h1>
+    </header>
+
+    <div class="container">
+        <div class="description">
+            <p>Los Pingüinos Chiquititos somos un grupo de 4 estudiantes de Ingeniería de Sistemas: Albert, el
+                solucionador de problemas; Sabrina, la creativa del diseño; Wilder, el explorador de nuevas tecnologías;
+                y Rodrigo, el organizador. Juntos, enfrentamos desafíos con pasión, trabajo en equipo y muchas ganas de
+                aprender.</p>
+        </div>
+        
+        <div class="team">
+            <div class="team-member"><img src="albert.jpg" alt="Albert">
+                <h3><a href="Biografia Albert.html">Albert</a></h3>
+            </div>
+            <div class="team-member"><img src="sabrina.jpg" alt="Sabrina">
+                <h3><a href="Biografia Sabrina.html">Sabrina</a></h3>
+            </div>
+            <div class="team-member"><img src="wilder.jpg" alt="Wilder">
+                <h3><a href="Biografia Wilder.html">Wilder</a></h3>
+            </div>
+            <div class="team-member"><img src="rodrigo.jpg" alt="Rodrigo">
+                <h3><a href="Biografia Rodrigo.html">Rodrigo</a></h3>
+            </div>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-images">
+                <div class="carousel-item active">
+                    <img src="objetivo1.jpg" alt="Objetivo 1">
+                    <div class="carousel-item-text">Desarrollar habilidades técnicas...</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="objetivo2.jpg" alt="Objetivo 2">
+                    <div class="carousel-item-text">Fomentar el trabajo en equipo...</div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelectorAll(".carousel-item");
+        
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.display = i === index ? "block" : "none";
+                });
+            }
+        
+            function moveSlide(step) {
+                currentIndex += step;
+                if (currentIndex >= slides.length) currentIndex = 0;
+                if (currentIndex < 0) currentIndex = slides.length - 1;
+                showSlide(currentIndex);
+            }
+        
+            // Mostrar la primera imagen al cargar la página
+            showSlide(currentIndex);
+        </script>
+
+        <div class="github-section">
+            <div class="github-title">GitHub</div>
+            <div class="github-description">Nuestro aplicativo está diseñado para facilitar el trabajo colaborativo en
+                proyectos de software, permitiendo una gestión eficiente del código y del equipo.</div>
+            <div class="github-video">
+                <iframe src="https://www.youtube.com/embed/IFcWZgJzBt0?si=DEM10_xmp3l2I4_v" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Los Pingüinos Chiquititos.</p>
+    </footer>
+
+</body>
+
+</html>
